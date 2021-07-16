@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<hr>
+
+<div class="row">
+
+<div class="col-md-6">
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="/media/images/{{computer_choice.image}}" alt="Card image cap">
+</div>
+<div class="card-body">
+    <h5 class="card-title">Computer Card</h5>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="/media/images/{{human_choice.image}}" alt="Card image cap">
+</div>
+
+<div class="card-body">
+    <h5 class="card-title">Your Card</h5>
+</div>
+</div>
+
+</div>
+<h5 id="result">Hello <span style="color:#ff6347;">{{name}}</span> you <span style="color:#ff6347;">{{result}}</span> the game.You have recevied <span style="color:#ff6347;">¥ {{amount}}.</span></h5>
+<a href="/" class="btn btn-danger">Play Again!</a>
+
+{% endblock %}
